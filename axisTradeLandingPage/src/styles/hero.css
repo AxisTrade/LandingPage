@@ -45,3 +45,40 @@ body{
   background: rgba(0, 0, 0, 0.5); 
   pointer-events: none; 
 }
+
+.heading{
+  margin-top: 10%; ;
+}
+.heading h1 {
+  position: relative;
+  justify-self: center;
+  margin-top: 15%;
+  text-align: center;
+  z-index: 3;
+  font-family: "Gothic A1";
+  font-size: 5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+
+.heading span {
+  color: #E97A02;
+}
+
+.heading p {
+  position: relative;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  width: 50% ;
+  z-index: 3;
+  font-family: "Gothic A1";
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  overflow: wrap;
+
+}

@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root{
-    --primary-orange: #FF5403;
+    --primary-orange: #E97A02;
     --secondary-orange: #FF7A00;
     --light-orange: #fff4e937;
     --white-color: #ffffff7a;
@@ -8,30 +16,76 @@
     --black-color: #000000;
 }
 
-
-
 .navbar {
-  --border-width: 1px;
+  --border-width: 2px;
   border-radius: 1rem;
   position: relative;
   display: flex;
-  justify-content: space-evenly;
-  color: white;
+  justify-content: space-between;
   width: 90%;
   height: 3em;
-  background: hsl(from var(--white-color) h s l / 0.25);
-  backdrop-filter: blur(12px);
+  margin-top: 1%;
+  margin-left: 5%;
+  border-radius: 17px;
+  border: 1px solid #ffffff36;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(238, 154, 64, 0.08) 75.71%, rgba(233, 122, 2, 0.10) 100%), rgba(255, 255, 255, 0.20);
+  box-shadow: 0 10px 26.3px 0 rgba(0, 0, 0, 0.20);
+  backdrop-filter: blur(5px);
 }
 
-.navbar::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  border-radius: inherit;
-  border: var(--border-width) solid transparent;
-  background: linear-gradient(var(--white-color), var(--light-orange)) border-box;
-  mask: linear-gradient(black, black) border-box,
-  linear-gradient(black, black) padding-box;
-  mask-composite: subtract;
+
+.content{
+   height: 2em;
+   width: auto;
+   margin-top: 1em;
+}
+
+.axisTradeLogo {
+  margin-left: 1em;
+  display: flex;
+}
+
+.logo{
+  margin-bottom: 0.1em;
+}
+.axisTradeLogo span {
+  color: var(--white-color);
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-left: 0.5em;
+}
+
+
+a{
+  text-decoration: none;
+  color: white;
+  padding: 0.5em;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: white;
+  padding: 0.5em;
+}
+
+.primary{
+  background-color: var(--primary-orange);
+  border-radius: 1em;
+  padding: 0.5em 2em;
+  text-align: center;
+  height: 1.5em;
+  width: auto;
+  margin: 0.2em 0.5em 0 0 ;
+  border: 1px solid #ffffff36;
+
+  
+}
+
+.primary:hover{
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.6);
+}
+
+.primary p{
+  margin: 0.2em 0.5em;
+  text-align: center;
 }
