@@ -1,11 +1,11 @@
 <script>
-  import '../styles/navbar.css'
+  import '../styles/components/navbar.css'
 </script>
 
 <nav class="navbar"> 
     <div class="content axisTradeLogo">
       <img src="/images/navBarLogo.png" alt="Axis Trade Logo" class="logo" />
-      <span>AxisTrade</span>
+      <!-- <span>Axis<div class="highlight">Trade</div></span> -->
     </div>
     <div class="content"> 
 

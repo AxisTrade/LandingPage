@@ -1,6 +1,6 @@
 <script>
   import NavBar from "./NavBar.svelte";
-  import "../styles/hero.css";
+  import "../styles/components/hero.css";
 </script>
 
 <div class="hero-container">
@@ -10,7 +10,7 @@
 <NavBar />
 <div class="heading"> 
   <h1> 
-  <span>Revolutioning</span> the <br>
+  <span>Revolutionizing</span> the <br>
   <span>mining</span>  vetting process 
   </h1>
   <p> 

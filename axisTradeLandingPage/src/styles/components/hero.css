@@ -1,5 +1,6 @@
 body{
     color: white;
+    margin: 0;
 }
 
 .hero-image{
@@ -30,10 +31,11 @@ body{
 }
 
 .hero-image {
-  width: 100%;
+  width: max-content;
   height: 100%;
   object-fit: cover; 
   display: block;
+  
 }
 
 .overlay {
