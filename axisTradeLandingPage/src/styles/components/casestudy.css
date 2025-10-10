@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: row ;
 
+
 }
 
 .placeholder{
@@ -39,9 +40,10 @@
 .growingMarket p{
     padding: 0; 
     margin: 0 0 0 2%;
-    width: 100%;
+    width: 90%;
     padding: 2%;
-    text-align: center;
+    text-align: left;
+    text-overflow: wrap;
 }
 span{
     color: #E97A02;

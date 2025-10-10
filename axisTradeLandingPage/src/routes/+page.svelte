@@ -24,6 +24,6 @@
 <Hero />
 <AboutUs/>
 <CaseStudy/>
-<Features/>
+<AboutUs/>
 <ProductWorks/>
 <Footer/>

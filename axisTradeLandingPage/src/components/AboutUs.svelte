@@ -1,24 +1,22 @@
 <script>
     import '../styles/components/aboutus.css'
     import BlurButton from '../elements/blurButton.svelte'
-
-    // 1. Define the content for your buttons
     const button1 = {
         heading: "Shortened transaction cycles",
         information: "In weeks, buyers and sellers are able to interact with each other. Fast tracking the vetting process for mining",
-        imgSrc: "/path/to/your/clock-icon.png" // Replace with the actual path to your clock icon
+        imgSrc: "/images/ClockIcon.png" 
     };
 
     const button2 = {
-        heading: "Next Button Heading",
-        information: "Information for the second button goes here.",
-        imgSrc: "/path/to/another-icon.png"
+        heading: "Direct buyer and seller interaction",
+        information: "Connects buyers and sellers directly by eliminating middlemen and reducing commission fees",
+        imgSrc: "/images/HandShakeIcon.png"
     };
 
     const button3 = {
-        heading: "Final Button Feature",
-        information: "This explains the third feature in detail.",
-        imgSrc: "/path/to/last-icon.png"
+        heading: "Standardized procedures",
+        information: "Streamlined communication workflows with contracts in multiple languages. ",
+        imgSrc: "/images/FileIcon.png"
     };
 </script>
 

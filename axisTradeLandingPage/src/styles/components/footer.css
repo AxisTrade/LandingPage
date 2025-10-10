@@ -13,6 +13,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .footer-left h3 {
@@ -34,7 +35,7 @@
   .footer-maintext{
     position: absolute;
     top: 30%; 
-    left: 56%; 
+    left: 52%; 
     width: 100%;
     transform: translate(-50%, -50%); 
     
@@ -45,16 +46,22 @@
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
-    top:-3em;
-    left:2em
+    left:2em;
+    width:100%;
   }
 
 
   .contactUsIcons {
-    width: 20%;
     display: flex;
-    justify-content: stretch;
+
   }
+  .footerIcons{
+    width: 2em !important;
+    height: 2em !important;
+  }
+
+ 
+
 
 
 
