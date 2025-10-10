@@ -1,6 +1,10 @@
 <script> 
     import Hero from "../components/Hero.svelte";
     import AboutUs from "../components/AboutUs.svelte";
+    import Features from "../components/Features.svelte";
+	import CaseStudy from "../components/CaseStudy.svelte";
+	import ProductWorks from "../components/ProductWorks.svelte";
+  import Footer from "../components/Footer.svelte";
 </script>
 
 
@@ -18,3 +22,7 @@
 </style>
 <Hero />
 <AboutUs/>
+<Features/>
+<CaseStudy/>
+<ProductWorks/>
+<Footer/>
