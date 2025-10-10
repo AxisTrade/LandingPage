@@ -12,6 +12,7 @@
     :global(body){
         background-color: white;
         margin: 0;
+        font-family: "Gothic A1", sans-serif;
 }
 :global(*) {
   margin: 0;
@@ -22,7 +23,7 @@
 </style>
 <Hero />
 <AboutUs/>
-<Features/>
 <CaseStudy/>
+<Features/>
 <ProductWorks/>
 <Footer/>

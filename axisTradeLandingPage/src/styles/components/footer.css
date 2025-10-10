@@ -1,0 +1,60 @@
+  footer {
+    background-color: #E97A02C9; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding:0;
+  }
+
+
+
+.footer-left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left h3 {
+    width: 100%;
+    text-align: left;
+  }
+
+.footer-left p {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+  .footer-left img {
+    width: 15em;
+  }
+
+  .footer-maintext{
+    position: absolute;
+    top: 30%; 
+    left: 56%; 
+    width: 100%;
+    transform: translate(-50%, -50%); 
+    
+  }  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    top:-3em;
+    left:2em
+  }
+
+
+  .contactUsIcons {
+    width: 20%;
+    display: flex;
+    justify-content: stretch;
+  }
+
+
+

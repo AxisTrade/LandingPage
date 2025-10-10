@@ -1,0 +1,48 @@
+.featuresSection{ 
+    background-color: white;
+    backdrop-filter: blur(5px);
+    margin: 0; 
+    color: black;
+    margin: 0;
+
+}
+
+.featuresContainer{
+    display: flex;
+    flex-direction: row ;
+
+}
+
+.placeholder{
+    background-color: tomato;
+}
+.featuresItem{
+    width: 100%;
+    align-items: flex-start;
+    
+
+}
+
+.featuresItem img{
+    width: 100%;
+    align-items: flex-start;
+    margin:0; 
+    
+}
+
+.growingMarket{
+    margin: 3% 2% 0 0;
+    font-family: "Gothic A1";
+    font-style: normal;
+}
+
+.growingMarket p{
+    padding: 0; 
+    margin: 0 0 0 2%;
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+}
+span{
+    color: #E97A02;
+}
