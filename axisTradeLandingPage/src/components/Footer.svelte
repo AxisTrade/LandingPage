@@ -16,7 +16,7 @@
         <a href="mailto:info@axistrade.com" aria-label="Email us">
           <img src="/images/phoneIcon.png" alt="Email Icon" class="footerIcons" />
         </a>
-        <a href="https://www.linkedin.com/company/axistrade" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn">
+        <a href="https://www.linkedin.com/in/axistrade-africa-415078389/" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn">
           <img src="/images/link.png" alt="LinkedIn Icon" class="footerIcons" />
         </a>
       </div>
