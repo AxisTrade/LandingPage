@@ -1,0 +1,49 @@
+:root{
+  --navy:#011F3D; --steel:#075073; --line:#e7eef3;
+  --ink:#0f1b26; --muted:#5f6f7f;
+}
+
+.wrap{
+  background:#fff; border-top:1px solid var(--line); color:var(--ink);
+  padding: clamp(1.6rem, 4vw, 2rem) 0 1rem;
+}
+
+.top{
+  display:grid; gap:2rem; grid-template-columns:1fr;
+}
+
+.brandCol{ max-width:520px }
+.logo{
+  font-family: ui-serif, Georgia, serif; font-size:1.4rem; font-weight:900;
+  margin-bottom:.4rem;
+}
+.news{
+  display:flex; gap:.5rem; align-items:center; margin:.6rem 0 .2rem;
+}
+.input{
+  flex:1; min-width:220px;
+  border:1px solid var(--line); border-radius:999px; background:#fff;
+  padding:.75rem 1rem; font:inherit; color:var(--ink);
+}
+.submit{
+  padding:.7rem 1rem; border-radius:999px; background:#fff; font-weight:800;
+  border:1px solid var(--line);
+}
+.small{ display:block; color:var(--muted) }
+
+.cols{
+  display:grid; gap:1.2rem; grid-template-columns: repeat(3, minmax(140px, 1fr));
+}
+.cols h4{ margin:0 0 .4rem; font-weight:900 }
+.cols a{ display:block; color:#2c3945; margin:.25rem 0; font-weight:600 }
+
+.bottom{
+  border-top:1px solid var(--line); margin-top:1.6rem; padding-top:1rem;
+  display:flex; justify-content:space-between; align-items:center; gap:.8rem; flex-wrap:wrap;
+}
+.legal{ display:flex; gap:1rem; flex-wrap:wrap }
+.legal a{ color:#2c3945; font-weight:600 }
+
+@media (min-width:980px){
+  .top{ grid-template-columns: 1.4fr 2fr }
+}

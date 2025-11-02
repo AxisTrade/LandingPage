@@ -1,0 +1,56 @@
+:root{
+  --navy:#011F3D; --steel:#075073; --orange:#E97A02;
+  --line:#e7eef3;
+}
+
+.wrap{ padding: clamp(1.6rem,4vw,2.2rem) 0 }
+
+.card{
+  position:relative; overflow:hidden; border-radius:18px;
+  border:1px solid var(--line);
+  min-height:240px;
+}
+
+.bg{
+  position:absolute; inset:0; background-size:cover; background-position:center;
+  transform:scale(1.02); filter:brightness(.7) saturate(.9);
+  z-index:0;
+}
+
+/* gentle frosted glass look */
+.glass{
+  position:absolute; inset:0;
+  background:
+    radial-gradient(1200px 500px at 50% 10%, rgba(0, 0, 0, 0.5), rgba(255,255,255,.15)),
+    linear-gradient(180deg, rgba(0,0,0,.1), rgba(0,0,0,.35));
+  backdrop-filter: blur(2px);
+  z-index:1;
+}
+
+.content{
+  position:relative; z-index:2; color:#fff;
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+  gap:.6rem; padding: clamp(1.2rem, 4vw, 1.6rem);
+}
+
+.content h2{
+  margin:0; font-weight:900; line-height:1.08;
+  font-size: clamp(1.4rem, 4.2vw, 2rem);
+  text-shadow: 0 2px 18px rgba(0,0,0,.35);
+}
+.content p{ margin:0; max-width:60ch; opacity:.95 }
+
+.actions{ display:flex; gap:.6rem; margin-top:.6rem; flex-wrap:wrap; justify-content:center }
+
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+  padding:.7rem 1rem; border-radius:999px; font-weight:800;
+  background:rgba(255,255,255,.95); color:#0e1418;
+  border:1px solid rgba(255,255,255,.7);
+}
+.btnGhost{
+  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+  padding:.65rem .95rem; border-radius:999px; font-weight:700; color:#fff;
+  background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(4px);
+}

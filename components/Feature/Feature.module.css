@@ -1,0 +1,74 @@
+:root{
+  --navy:#011F3D;
+  --steel:#075073;
+  --orange:#E97A02;
+  --panel:#f7f9fb;
+  --paper:#fff;
+  --line:#e7eef3;
+  --muted:#5f6f7f;
+  --radius:16px;
+  --shadow:0 14px 38px rgba(1,31,61,.08);
+}
+
+.wrap{ padding: clamp(2rem,5vw,3.5rem) 0; background:var(--panel) }
+
+.head{ text-align:center; margin-bottom: clamp(1.2rem,3vw,1.8rem) }
+.kicker{ color:#6b7b88; font-weight:700 }
+.head h2{
+  font-size: clamp(1.8rem,4.6vw,2.8rem);
+  line-height:1.1; margin:.25rem 0; color:#10161b; font-weight:900;
+}
+.head p{ color:var(--muted) }
+
+/* Grid: 1 col mobile, 3 col desktop with first card spanning 2 */
+.grid{
+  display:grid; gap:1rem; grid-template-columns:1fr;
+}
+@media (min-width:980px){
+  .grid{ grid-template-columns: 2fr 1fr 1fr }
+}
+
+.card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Card 1: split layout */
+.cardSplit{
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  overflow:hidden;
+}
+.cardBody{ padding: clamp(1rem,2.6vw,1.25rem) }
+.cardBody .tag{ display:block; color:#6b7b88; font-weight:700; margin-bottom:.4rem }
+.cardBody h3{ margin:.1rem 0 .4rem; font-size: clamp(1.25rem,2.6vw,1.6rem); color:#121a21 }
+.cardBody p{ color:var(--muted); margin:0 0 .7rem }
+.link{ font-weight:800; color:var(--steel); display:inline-flex; align-items:center; gap:.25rem }
+
+.cardMedia{
+  border-left:1px solid var(--line);
+  display:grid; place-items:center;
+  background:linear-gradient(180deg,#eaf1f6,#dfe8ef);
+}
+.mediaIcon{
+  width:72px; height:72px; border-radius:12px; display:grid; place-items:center;
+  background:#d8e3ec; color:#5e7384; font-size:1.4rem;
+}
+
+/* Card 2/3: content top, media strip bottom */
+.cardStack{
+  display:grid; grid-template-rows: auto 140px; overflow:hidden;
+}
+.cardStrip{
+  border-top:1px solid var(--line);
+  background: linear-gradient(180deg,#eaf1f6,#dfe8ef);
+  display:grid; place-items:center;
+}
+.stripIcon{
+  width:54px; height:54px; border-radius:12px; background:#d8e3ec; color:#5e7384; display:grid; place-items:center;
+}
+
+/* Rounded corners look a bit softer */
+.card, .cardSplit, .cardStack{ border-radius: 18px }
