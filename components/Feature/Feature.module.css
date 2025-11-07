@@ -1,74 +1,170 @@
-:root{
-  --navy:#011F3D;
-  --steel:#075073;
-  --orange:#E97A02;
-  --panel:#f7f9fb;
-  --paper:#fff;
-  --line:#e7eef3;
-  --muted:#5f6f7f;
-  --radius:16px;
-  --shadow:0 14px 38px rgba(1,31,61,.08);
+:root {
+  --navy:   #011F3D;
+  --orange: #E97A02;
 }
 
-.wrap{ padding: clamp(2rem,5vw,3.5rem) 0; background:var(--panel) }
-
-.head{ text-align:center; margin-bottom: clamp(1.2rem,3vw,1.8rem) }
-.kicker{ color:#6b7b88; font-weight:700 }
-.head h2{
-  font-size: clamp(1.8rem,4.6vw,2.8rem);
-  line-height:1.1; margin:.25rem 0; color:#10161b; font-weight:900;
-}
-.head p{ color:var(--muted) }
-
-/* Grid: 1 col mobile, 3 col desktop with first card spanning 2 */
-.grid{
-  display:grid; gap:1rem; grid-template-columns:1fr;
-}
-@media (min-width:980px){
-  .grid{ grid-template-columns: 2fr 1fr 1fr }
+/* Section shell */
+.wrap {
+  background: #f5f6f8;
+  padding: clamp(4rem, 8vw, 5.5rem) 1.5rem clamp(4.5rem, 9vw, 6rem);
 }
 
-.card{
-  background:var(--paper);
-  border:1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+/* Width + layout */
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Card 1: split layout */
-.cardSplit{
-  display:grid;
-  grid-template-columns: 1.1fr 1fr;
-  overflow:hidden;
-}
-.cardBody{ padding: clamp(1rem,2.6vw,1.25rem) }
-.cardBody .tag{ display:block; color:#6b7b88; font-weight:700; margin-bottom:.4rem }
-.cardBody h3{ margin:.1rem 0 .4rem; font-size: clamp(1.25rem,2.6vw,1.6rem); color:#121a21 }
-.cardBody p{ color:var(--muted); margin:0 0 .7rem }
-.link{ font-weight:800; color:var(--steel); display:inline-flex; align-items:center; gap:.25rem }
-
-.cardMedia{
-  border-left:1px solid var(--line);
-  display:grid; place-items:center;
-  background:linear-gradient(180deg,#eaf1f6,#dfe8ef);
-}
-.mediaIcon{
-  width:72px; height:72px; border-radius:12px; display:grid; place-items:center;
-  background:#d8e3ec; color:#5e7384; font-size:1.4rem;
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
 }
 
-/* Card 2/3: content top, media strip bottom */
-.cardStack{
-  display:grid; grid-template-rows: auto 140px; overflow:hidden;
-}
-.cardStrip{
-  border-top:1px solid var(--line);
-  background: linear-gradient(180deg,#eaf1f6,#dfe8ef);
-  display:grid; place-items:center;
-}
-.stripIcon{
-  width:54px; height:54px; border-radius:12px; background:#d8e3ec; color:#5e7384; display:grid; place-items:center;
+.kicker {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #a0a0a0;
 }
 
-/* Rounded corners look a bit softer */
-.card, .cardSplit, .cardStack{ border-radius: 18px }
+.title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #111;
+}
+
+/* Cards grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+/* Card base */
+.card {
+  position: relative;
+  min-height: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Background image */
+.cardBg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  transition: transform 0.4s ease;
+}
+
+/* Gradient overlay like the ref (lighter at top, darker at bottom) */
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.5) 55%,
+      rgba(0, 0, 0, 0.75) 100%
+    );
+}
+
+/* Content */
+.cardContent {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 1.6rem 1.7rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.cardBody {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Learn more button */
+.cardButton {
+  align-self: flex-start;
+  margin-top: 0.4rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  color: #111;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease, color 0.15s ease;
+}
+
+.cardButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.arrow {
+  font-size: 0.9rem;
+}
+
+/* Hover zoom on image */
+.card:hover .cardBg {
+  transform: scale(1.06);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .wrap {
+    padding-inline: 1.2rem;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card {
+    min-height: 280px;
+  }
+}

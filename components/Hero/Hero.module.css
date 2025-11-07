@@ -1,66 +1,82 @@
-:root{
-  /* Use your AxisTrade palette if available globally; fallbacks here */
+:root {
   --navy:   #011F3D;
   --steel:  #075073;
   --orange: #E97A02;
+
+  /* If you use heroTuck, these should match your nav pill */
+  --nav-h: 64px;
+  --nav-y: 20px;
 }
 
 /* Section shell */
-.wrap{
-  position:relative;
+.wrap {
+  position: relative;
   min-height: clamp(520px, 78vh, 880px);
-  isolation:isolate;   /* keeps overlays behind content */
-  overflow:hidden;
-  background:#0f1214;  /* base fill while the image loads */
+  isolation: isolate;
+  overflow: hidden;
 }
 
 /* Background image */
-.bg{
-  position:absolute; inset:0;
-  background-position:center 60%;
-  background-size:cover;
-  filter:saturate(.6) contrast(.9) brightness(.55);
-  transform:scale(1.02);  /* subtle zoom for depth */
-  z-index:-3;
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* filter: saturate(.) contrast(.9) brightness(.55); */
+  z-index: -3;
 }
 
-/* Vignette (dark edges) */
-.vignette{
-  position:absolute; inset:-2%;
+/* Dark edges like the ref design */
+.vignette {
+  position: absolute;
+  inset: -2%;
   background:
     radial-gradient(1200px 500px at 40% 60%, rgba(0,0,0,0) 30%, rgba(0,0,0,.45) 85%),
     radial-gradient(1100px 700px at 100% 30%, rgba(0,0,0,.35) 10%, rgba(0,0,0,.6) 80%);
-  z-index:-2;
+  z-index: -2;
 }
 
-/* Fog/gradient layer to soften contrast & help text */
-.fog{
-  position:absolute; inset:0;
+/* Global dark overlay + soft glow on left */
+.fog {
+  position: absolute;
+  inset: 0;
   background:
     linear-gradient(180deg, rgba(10,12,14,.65) 0%, rgba(10,12,14,.55) 40%, rgba(10,12,14,.75) 100%),
     radial-gradient(600px 260px at 12% 30%, rgba(255,255,255,.06) 0, rgba(255,255,255,0) 70%);
-  z-index:-1;
+  z-index: -1;
 }
 
-/* Content grid */
-.frame{
-  position:relative;
-  display:grid;
+/* Layout grid */
+.frame {
+  position: relative;
+  display: grid;
   grid-template-columns: 1fr;
-  align-items:end;
-  min-height:inherit;
+  align-items: end;
+  min-height: inherit;
+  padding-inline: clamp(1.4rem, 5vw, 3rem);
   padding-top: clamp(1.2rem, 4vw, 2rem);
   padding-bottom: clamp(1.2rem, 6vw, 3rem);
 }
 
-/* Left block (headline + ctas) */
-.left{
+/* LEFT column */
+.left {
   margin-top: clamp(2rem, 8vh, 6rem);
-  max-width: 48ch;
+  max-width: 50ch;
 }
 
-.h1{
-  margin:0 0 1rem 0;
+/* Small label above title */
+.kicker {
+  margin: 0 0 .6rem 0;
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.65);
+}
+
+/* Main hero heading */
+.h1 {
+  margin: 0 0 1rem 0;
   font-weight: 900;
   line-height: .95;
   letter-spacing: -.01em;
@@ -69,31 +85,46 @@
   text-wrap: balance;
 }
 
-/* CTA buttons */
-.ctas{ display:flex; gap:.6rem; margin-top: .8rem; flex-wrap:wrap }
+/* Buttons */
+.ctas {
+  display: flex;
+  gap: .6rem;
+  margin-top: .8rem;
+  flex-wrap: wrap;
+}
 
-.ctaPrimary{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:.7rem 1.05rem; border-radius:999px;
-  font-weight:800; color:#0b0f12;
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .7rem 1.05rem;
+  border-radius: 999px;
+  font-weight: 800;
+  color: #0b0f12;
   background: rgba(255,255,255,.92);
-  border:1px solid rgba(255,255,255,.65);
+  border: 1px solid rgba(255,255,255,.65);
   box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  cursor: pointer;
 }
 
-.ctaGhost{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:.6rem .95rem; border-radius:999px;
-  font-weight:700; color: rgba(255,255,255,.82);
+.ctaGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .6rem .95rem;
+  border-radius: 999px;
+  font-weight: 700;
+  color: rgba(255,255,255,.82);
   background: rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.2);
   backdrop-filter: blur(6px);
+  cursor: pointer;
 }
 
-/* Right/bottom paragraph */
-.caption{
-  justify-self:end;
-  align-self:end;
+/* Right/bottom caption line */
+.caption {
+  justify-self: end;
+  align-self: end;
   max-width: 46ch;
   color: rgba(255,255,255,.75);
   font-size: clamp(.95rem, 2.2vw, 1rem);
@@ -101,19 +132,30 @@
   margin-top: 2rem;
 }
 
-/* tuck the hero under the fixed pill, but keep content readable */
-.heroTuck{
+/* Tuck the hero under the fixed pill nav */
+.heroTuck {
   padding-top: calc(var(--nav-h) + var(--nav-y));
   margin-top: calc(-1 * (var(--nav-h) + var(--nav-y)));
 }
 
-
-/* Desktop layout: push caption bottom-right */
-@media (min-width: 980px){
-  .frame{
+.highlight {
+  color: var(--orange);
+}
+/* Desktop layout: text left, caption bottom-right */
+@media (min-width: 980px) {
+  .frame {
     grid-template-columns: 1.2fr .8fr;
     grid-template-rows: 1fr auto;
   }
-  .left{ grid-column:1; grid-row:1 / span 2; }
-  .caption{ grid-column:2; grid-row:2; padding-left: 2rem; }
+
+  .left {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .caption {
+    grid-column: 2;
+    grid-row: 2;
+    padding-left: 2rem;
+  }
 }

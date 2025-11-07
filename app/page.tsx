@@ -2,7 +2,7 @@ import NavBar from "@/components/NavBar/NavBar";
 import Hero from "@/components/Hero/Hero";
 import Footer  from "@/components/Footer/Footer";
 import AboutUs from "@/components/AboutUs/AboutUs";
-import Solutions from "@/components/Solutions/Solutions";
+import CaseStudy from "@/components/CaseStudy/CaseStudy";
 import ContactUs from "@/components/ContactUs/ContactUs";
 import Features from "@/components/Feature/Feature";
 // import Services from "@/components/Services/Services";
@@ -17,9 +17,10 @@ export default function Page() {
     <>
       <NavBar />
       <Hero />
+      <AboutUs/>
       <Features />
-      <Solutions />
-      <ContactUs />
+      <ContactUs /> 
+      {/* <CaseStudy /> */}
       <Footer />
     </>
   );

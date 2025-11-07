@@ -1,78 +1,63 @@
-"use client";
-
 import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
     <footer className={styles.wrap}>
-      <div className="container">
-        <div className={styles.top}>
-          {/* Brand + newsletter */}
-          <div className={styles.brandCol}>
-            <div>AxisTrade</div>
-            <p>
-              Stay informed about the latest mining marketplace insights and
-              updates
-            </p>
-
-            <form
-              className={styles.news}
-              onSubmit={(e) => e.preventDefault()}
-              aria-label="Newsletter signup"
-            >
-              <input
-                className={styles.input}
-                type="email"
-                placeholder="Email address"
-                required
-              />
-              <button className={styles.submit} type="submit">Subscribe</button>
-            </form>
-
-            <small className={styles.small}>
-              By subscribing, you agree to our privacy policy and consent to
-              receive updates.
-            </small>
-          </div>
-
-          {/* Link columns */}
-          <div className={styles.cols}>
-            <div>
-              <h4>Company</h4>
-              <a href="#">About us</a>
-              <a href="#">Careers</a>
-              <a href="#">Press</a>
-              <a href="#contact">Contact</a>
-              <a href="#">Services</a>
-            </div>
-
-            <div>
-              <h4>Resources</h4>
-              <a href="#">Blog</a>
-              <a href="#">Guides</a>
-              <a href="#">Webinars</a>
-              <a href="#">Case studies</a>
-              <a href="#">Support</a>
-            </div>
-
-            <div>
-              <h4>Follow us</h4>
-              <a href="#">Facebook</a>
-              <a href="#">Instagram</a>
-              <a href="#">X</a>
-              <a href="#">LinkedIn</a>
-              <a href="#">Youtube</a>
-            </div>
+      <div className={styles.inner}>
+        {/* Logo row */}
+        <div className={styles.logoRow}>
+          <div className={styles.brand}>
+            <span className={styles.mark} aria-hidden />
+            <span className={styles.word}>
+              Axis<span>Trade</span>
+            </span>
           </div>
         </div>
 
-        <div className={styles.bottom}>
-          <small>© {new Date().getFullYear()} AxisTrade. All rights reserved.</small>
-          <div className={styles.legal}>
-            <a href="#">Privacy policy</a>
-            <a href="#">Terms of service</a>
-            <a href="#">Cookie settings</a>
+        {/* Links row */}
+        <div className={styles.linksRow}>
+          <div className={styles.column}>
+            <p className={styles.colIndex}>01 -</p>
+            <ul className={styles.list}>
+              <li>Privacy policy</li>
+              <li>Terms of use</li>
+              <li>Cookies policy</li>
+              <li>Platform security</li>
+              <li>Supplier code of conduct</li>
+              <li>Get in touch</li>
+            </ul>
           </div>
+
+          <div className={styles.column}>
+            <p className={styles.colIndex}>02 -</p>
+            <ul className={styles.list}>
+              <li>About us</li>
+              <li>Careers</li>
+              <li>Blog</li>
+              <li>Case studies</li>
+              <li>Contact us</li>
+              <li>Media kit</li>
+            </ul>
+          </div>
+
+          <div className={styles.column}>
+            <p className={styles.colIndex}>03 -</p>
+            <ul className={styles.list}>
+              <li>Press</li>
+              <li>Partnerships</li>
+              <li>LinkedIn</li>
+              <li>Twitter</li>
+              <li>YouTube</li>
+              <li>Discord</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Copyright row */}
+        <div className={styles.bottomRow}>
+          <p className={styles.copy}>
+            © {new Date().getFullYear()} AxisTrade. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

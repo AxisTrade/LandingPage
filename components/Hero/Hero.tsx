@@ -4,41 +4,28 @@ type Props = {
   bgSrc?: string;
 };
 
-export default function Hero({ bgSrc = "/images/hero-mine.jpg" }: Props) {
+export default function Hero({ bgSrc = "/hero/heroImage2.jpg" }: Props) {
   return (
-    <section className={styles.wrap} aria-label="Hero">
-      <div
-        className={styles.bg}
-        style={{ backgroundImage: `url(${bgSrc})` }}
-        aria-hidden
-      />
+    // heroTuck is optional – use it if you want the nav pill to overlap the hero
+    <section className={`${styles.wrap} ${styles.heroTuck}`}>
+      <img src={bgSrc} alt="Hero Background" className={styles.bg} />
+      <div className={styles.vignette} />
+      <div className={styles.fog} />
 
-      <div className={styles.vignette} aria-hidden />
-      <div className={styles.fog} aria-hidden />
-
-      <div className={`container ${styles.frame}`}>
-        {/* Left copy */}
+      {/* Content frame */}
+      <div className={styles.frame}>
         <div className={styles.left}>
           <h1 className={styles.h1}>
-            Streamline mining
+            CONNECTING MINING SUPPLIERS & BUYERS
             <br />
-            supply chains with
-            <br />
-            trusted
-            <br />
-            verification
+            ON <span className={styles.highlight}>ONE PLATFORM</span>
           </h1>
 
           <div className={styles.ctas}>
-            <a className={styles.ctaPrimary} href="#explore">Explore</a>
-            <a className={styles.ctaGhost} href="#learn">Learn</a>
+            <button className={styles.ctaPrimary}>Learn More</button>
+  
           </div>
         </div>
-        <p className={styles.caption}>
-          AxisTrade connects mining buyers and sellers through rigorous supplier
-          vetting. We transform complex procurement into simple, secure
-          transactions.
-        </p>
       </div>
     </section>
   );
