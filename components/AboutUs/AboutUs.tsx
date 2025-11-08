@@ -34,8 +34,6 @@ export default function AboutUs() {
               <span className={styles.arrow}>➜</span>
             </a>
           </div>
-
-          {/* bottom accent line */}
           <div className={styles.accentBottom} aria-hidden="true" />
         </div>
       </div>

@@ -4,7 +4,7 @@ type Props = {
   bgSrc?: string;
 };
 
-export default function Hero({ bgSrc = "/hero/heroImage2.jpg" }: Props) {
+export default function Hero({ bgSrc = "/heroImage2.jpg" }: Props) {
   return (
     // heroTuck is optional – use it if you want the nav pill to overlap the hero
     <section className={`${styles.wrap} ${styles.heroTuck}`}>

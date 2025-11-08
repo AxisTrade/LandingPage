@@ -30,8 +30,6 @@ export default function ContactUs() {
             style={{ backgroundImage: "url(/contact/axis-ecosystem.jpg)" }} // swap to your image
           />
         </div>
-
-        {/* Process cards (how AxisTrade works) */}
         <div className={styles.processRow}>
           <article className={styles.processCard}>
             <h3 className={styles.processTitle}>MODULAR ONBOARDING</h3>
