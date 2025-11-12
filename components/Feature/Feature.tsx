@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./Feature.module.css";
 
 const FEATURES = [
@@ -6,7 +7,8 @@ const FEATURES = [
     title: "ENABLE EASY ACCESS FOR EVERYONE",
     description:
       "Give your teams a single, intuitive place to discover verified mining suppliers, compare offers, and secure contracts with confidence.",
-    image: "/features/feature-1.jpg", // swap to your own paths
+    image: "/features/feature-1.jpg",
+    url: "/features/easy-access",
   },
   {
     id: 2,
@@ -14,6 +16,7 @@ const FEATURES = [
     description:
       "Track shipments from pit to port with real-time status, standardized documentation, and a complete audit trail for every transaction.",
     image: "/features/feature-2.jpg",
+    url: "/features/supply-journey",
   },
   {
     id: 3,
@@ -21,6 +24,7 @@ const FEATURES = [
     description:
       "Use pricing history, performance metrics, and market data to negotiate smarter, reduce risk, and unlock new trading opportunities.",
     image: "/features/feature-3.jpg",
+    url: "/features/insights-to-deals",
   },
 ];
 
@@ -28,7 +32,6 @@ export default function Feature() {
   return (
     <section id="features" className={styles.wrap}>
       <div className={styles.inner}>
-        {/* Header */}
         <header className={styles.header}>
           <p className={styles.kicker}>FEATURES</p>
           <h2 className={styles.title}>
@@ -38,7 +41,6 @@ export default function Feature() {
           </h2>
         </header>
 
-        {/* Cards */}
         <div className={styles.grid}>
           {FEATURES.map((f) => (
             <article key={f.id} className={styles.card}>
@@ -51,10 +53,11 @@ export default function Feature() {
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{f.title}</h3>
                 <p className={styles.cardBody}>{f.description}</p>
-                <button className={styles.cardButton}>
-                  Learn more
-                  <span className={styles.arrow}>➜</span>
-                </button>
+
+                {/* Use Link, not button+href */}
+                <Link href={f.url} className={styles.cardButton}>
+                  Learn more <span className={styles.arrow}>➜</span>
+                </Link>
               </div>
             </article>
           ))}

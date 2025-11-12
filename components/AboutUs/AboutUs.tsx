@@ -25,14 +25,10 @@ export default function AboutUs() {
           </p>
 
           <div className={styles.actions}>
-            <a href="#contact" className={styles.primary}>
-              Learn more
-              <span className={styles.arrow}>➜</span>
-            </a>
-            <a href="#features" className={styles.secondary}>
-              Full catalog of services
-              <span className={styles.arrow}>➜</span>
-            </a>
+         <a href="/about" className={styles.primary}>
+  Learn more <span className={styles.arrow}>➜</span>
+</a>
+
           </div>
           <div className={styles.accentBottom} aria-hidden="true" />
         </div>
