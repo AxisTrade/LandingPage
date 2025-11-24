@@ -29,10 +29,9 @@ export default async function Page({ params }: Props) {
           <p className={styles.kicker}>Feature</p>
           <h1 className={styles.h1}>{f.title}</h1>
           <p className={styles.sub}>{f.tagline}</p>
-          <div className={styles.ctas}>
+          {/* <div className={styles.ctas}>
             <Link href="/contact" className={styles.primary}>Request a demo</Link>
-            <Link href="/case-studies" className={styles.ghost}>See case studies</Link>
-          </div>
+          </div> */}
         </div>
       </section>
 

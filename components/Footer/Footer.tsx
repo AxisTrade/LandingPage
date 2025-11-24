@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -7,7 +8,14 @@ export default function Footer() {
         {/* Logo row */}
         <div className={styles.logoRow}>
           <div className={styles.brand}>
-            <span className={styles.mark} aria-hidden />
+            <Image
+              src="/images/navBarLogo.png"
+              alt="AxisTrade logo"
+              width={28}
+              height={28}
+              className={styles.markImg}
+              priority
+            />
             <span className={styles.word}>
               Axis<span>Trade</span>
             </span>
@@ -36,19 +44,13 @@ export default function Footer() {
               <li>Blog</li>
               <li>Case studies</li>
               <li>Contact us</li>
-              <li>Media kit</li>
             </ul>
           </div>
 
           <div className={styles.column}>
             <p className={styles.colIndex}>03 -</p>
             <ul className={styles.list}>
-              <li>Press</li>
-              <li>Partnerships</li>
               <li>LinkedIn</li>
-              <li>Twitter</li>
-              <li>YouTube</li>
-              <li>Discord</li>
             </ul>
           </div>
         </div>

@@ -6,33 +6,23 @@ export default function NavBar() {
       <header className={styles.wrap} role="banner">
         <div className={styles.nav} aria-label="Primary navigation">
           <div className={styles.inner}>
-            <div className={styles.brand}>
-              {/* <span className={styles.mark} aria-hidden /> */}
-              {/* <span className={styles.word}>
-                Axis<span>Trade</span>
-              </span> */}
-            </div>
+            <div className={styles.brand}>{/* logo etc. */}</div>
 
             <nav className={styles.menu} aria-label="Main">
-              <button className={styles.menuItem}>
-                Solution 
-              </button>
-              <button className={styles.menuItem}>
-                Product 
-              </button>
-              <button className={styles.menuItem}>About Us</button>
-              <button className={styles.menuItem}>Contact Us</button>
-            </nav>
-
-            {/* <div className={styles.right}>
-              <a className={styles.cta} href="#contact">
-                Contact us <span className={styles.arrow}>➜</span>
+     <a className={styles.menuItem} href="#about">
+                About Us
               </a>
-            </div> */}
+              <a className={styles.menuItem} href="#features">
+                Features
+              </a>
+            
+              <a className={styles.menuItem} href="#contact">
+                Contact Us
+              </a>
+            </nav>
           </div>
         </div>
       </header>
-
 
       <div className={styles.spacer} aria-hidden />
     </>

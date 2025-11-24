@@ -109,3 +109,13 @@
     margin-bottom: 1.6rem;
   }
 }
+
+
+
+/* remove the old .mark gradient if you like, and add: */
+.markImg{
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain; /* keeps your logo crisp */
+}

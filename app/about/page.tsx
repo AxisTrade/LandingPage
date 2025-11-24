@@ -1,5 +1,5 @@
 import styles from "../../styles/History.module.css";
-
+import Image from "next/image";
 type TimelineItem = {
   year: string;
   title: string;
@@ -49,28 +49,20 @@ export default function History() {
               <div><strong>100%</strong><span>escrowed trades</span></div>
             </div>
           </div>
-          <div className={styles.snapMedia} aria-hidden>
-            {/* Swap this with a real image */}
-            <div className={styles.mediaCard}>Image / video placeholder</div>
-          </div>
+             <div className={styles.snapMedia} aria-hidden>
+            <Image
+              src="/images/aboutis.jpg"
+              alt="AxisTrade pit-to-port routing network"
+              className={styles.mediaImg}
+              width={640}
+              height={360}
+            />
         </div>
+        </div>  
       </section>
 
-      {/* <section className={styles.timeline}>
-        <h2 className={styles.tlTitle}>Milestones</h2>
-        <ol className={styles.tlList}>
-          {TIMELINE.map((t) => (
-            <li key={t.year} className={styles.tlItem}>
-              <div className={styles.tlDot} />
-              <div className={styles.tlYear}>{t.year}</div>
-              <div className={styles.tlCard}>
-                <h3>{t.title}</h3>
-                <p>{t.body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </section> */}
+
+
 
       <section className={styles.values}>
         <h2>What we stand for</h2>
@@ -96,7 +88,6 @@ export default function History() {
           <p>Tell us about your sourcing workflow and we’ll tailor a demo.</p>
           <div className={styles.ctaRow}>
             <a className={styles.primary} href="/contact">Book a demo</a>
-            <a className={styles.ghost} href="/case-studies">View case studies</a>
           </div>
         </div>
       </section>
